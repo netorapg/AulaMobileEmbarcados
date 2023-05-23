@@ -34,10 +34,6 @@ void loop()
     case 'a': /* Caso receba o caractere 'a'*/
       state = !state; /* substitui o valor de state entre 0 e 1 */
       digitalWrite(vermelho, state); /* state aciona ou desliga o LED */
-      if (HC05.available()) {
-        HC05.flush();
-      }
-      HC05.print("O LED Vermelho está ligado");
       break; /* Fim do caso 'a' */
 
     case 'b': /* Caso receba o caractere 'b' */
